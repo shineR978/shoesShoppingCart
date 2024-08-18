@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hants">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rachel" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- <base target="_blank" /> -->
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="logo">
+            <h1>ShoppingCart</h1>
+          </div>
+          <div class="cart__counter">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="total__counter">0</span>
+          </div>
+        </nav>
+        <div class="cart">
+          <div class="cart__items">
+            <div class="check__out">
+              <h4>Total Amout : $</h4>
+              <h4 class="total__cost">$0</h4>
+              <button class="btn check_out_btn">Check Out</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="products">
+        <div class="product__element">
+          <input type="hidden" name="" id="product_id" value="1" />
+          <img src="./img/black-fashion-gumshoes-1.png" alt="" id="image" />
+          <h4 class="product__name">Canvas Shoes</h4>
+          <h5 class="product__price">$3200</h5>
+          <div class="btn__add__to__cart">Add To Cart</div>
+        </div>
+        <div class="product__element">
+          <input type="hidden" name="" id="product_id" value="2" />
+          <img src="./img/fashion-shoes-sneakers-1.png" alt="" id="image" />
+          <h4 class="product__name">Casual Shoes</h4>
+          <h5 class="product__price">$2980</h5>
+          <div class="btn__add__to__cart">Add To Cart</div>
+        </div>
+        <div class="product__element">
+          <input type="hidden" name="" id="product_id" value="3" />
+          <img src="./img/pair-trainers.png" alt="" id="image" />
+          <h4 class="product__name">Sport Shoes</h4>
+          <h5 class="product__price">$3980</h5>
+          <div class="btn__add__to__cart">Add To Cart</div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

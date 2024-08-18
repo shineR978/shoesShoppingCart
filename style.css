@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background: #f0f2f5;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 70%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 17vh;
+  background-color: rgb(214, 238, 248);
+  box-shadow: 0 2px 10px -2px gray;
+}
+/* nav內所有元素，而不需要逐個設置。 */
+nav > * {
+  margin: 1rem;
+}
+.cart__counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  background-color: #ee6353;
+  position: relative;
+  z-index: 5;
+  top: 50%;
+  left: 0%;
+  /* cursor: pointer 滑鼠懸停在元素上時，鼠標會變成一個手形 */
+  cursor: pointer;
+}
+.cart__counter span {
+  font-size: 1rem;
+  margin: 0.2rem;
+}
+
+.fa-cart-shopping {
+  /* !important提高 CSS 規則的優先級 */
+  font-size: 20px !important;
+}
+
+.cart__items {
+  /* 暫時隱藏 */
+  display: none;
+  background: white;
+  position: absolute;
+  right: 16%;
+  top: 25%;
+  width: 500px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  z-index: 2;
+
+  box-shadow: 0px 10px 5px 0px rgba(151, 146, 146, 0.924);
+  border-bottom: 1px solid #f6b08c;
+}
+/* **具有 active 類時，應用這些樣式 */
+.cart__items.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* **::before選定的元素內容之前插入內容 */
+.cart__items::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: 3%;
+  width: 30px;
+  height: 50px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: 2px 0px 10px -2px white;
+}
+.cart__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  /* dashed 虛線樣式 */
+  border-bottom: 1px dashed #f6b08c;
+}
+
+.cart__item > * {
+  margin: 10px;
+}
+
+.cart__item img {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 5px;
+}
+
+.btn__small {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 0;
+  background: #d7e3e8;
+  color: white;
+  margin: 10px;
+  /* cursor: pointer 滑鼠懸停在元素上時，鼠標會變成一個手形 */
+  cursor: pointer;
+}
+
+.btn__remove {
+  background-color: #f0c0ba;
+}
+
+.check__out {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.total__cost {
+  position: relative;
+  top: 80%;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 0px;
+  background: #93d598;
+  color: white;
+  margin-left: 20px;
+  /* cursor: pointer 滑鼠懸停在元素上時，鼠標會變成一個手形 */
+  cursor: pointer;
+}
+
+.products {
+  /* 這段代碼將元素設置為網格佈局。 */
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  /* 並將其子元素分成 3 列，每列佔據相同的寬度 */
+
+  margin-top: 50px;
+  /* grid-gap 網格佈局中網格項之間的間距 */
+  grid-gap: 10px;
+}
+
+.products .product__element {
+  padding: 15px;
+  width: 100%;
+  height: 320px;
+  background-color: white;
+  box-shadow: 2px 4px 10px rgba(194, 182, 182, 0.9);
+}
+/* .product__name {
+  flex: 0 1 307px;
+} */
+
+.products .product__element img {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.products .product__element .product__name {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px;
+  text-align: left;
+}
+
+.products .product__element .product__price {
+  font-size: 20px;
+  /* italic 將文字設置為斜體 */
+  font-style: italic;
+  margin: 10px;
+}
+
+.btn__add__to__cart {
+  position: relative;
+  bottom: 0;
+  background: #4fa952;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* cursor: pointer 滑鼠懸停在元素上時，鼠標會變成一個手形 */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn__add__to__cart:hover {
+  background: #5fc063;
+}
